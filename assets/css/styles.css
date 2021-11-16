@@ -617,6 +617,7 @@ input {
 .place__card,
 .place__img {
     height: 230px;
+    width: auto;
 }
 
 .place__container {
@@ -635,6 +636,13 @@ input {
 
 .place__img {
     transition: var(--img-transition);
+}
+
+.place__data {
+    padding: 15px;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    width: 100%;
 }
 
 .place__content,
@@ -886,7 +894,7 @@ input {
 
 /* For small devices */
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 400px) {
     .place__container {
         grid-template-columns: max-content;
         justify-content: center;
@@ -908,6 +916,11 @@ input {
     .video__container {
         padding: 0;
     }
+    .place__card,
+    .place__img {
+        height: 150px;
+        width: auto;
+    }
 }
 
 
@@ -920,7 +933,7 @@ input {
         justify-content: center;
     }
     .place__container {
-        grid-template-columns: repeat(3, max-content);
+        grid-template-columns: repeat(2, max-content);
     }
     .subscribe__form {
         width: 470px;
