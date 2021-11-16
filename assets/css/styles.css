@@ -9,7 +9,7 @@
     /*========== Colors ==========*/
     /* Change favorite color to match images */
     /*Green dark 190 - Green 171 - Grren Blue 200*/
-    --hue-color: 190;
+    --hue-color: 199;
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 64%, 22%);
     --first-color-second: hsl(var(--hue-color), 64%, 22%);
@@ -111,6 +111,7 @@ body.dark-theme {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: .3s;
 }
 
 html {
@@ -201,7 +202,7 @@ input {
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, .25);
 }
 
 
@@ -219,8 +220,14 @@ input {
     color: var(--white-color);
 }
 
+.nav__logo img {
+    width: 40px;
+    padding-right: .5rem;
+}
+
 .nav__logo {
-    font-weight: var(--font-semi-bold);
+    display: flex;
+    align-items: center;
 }
 
 .nav__toggle {
@@ -253,7 +260,7 @@ input {
 }
 
 .nav__link {
-    color: var(--text-color-light);
+    color: var(--text-color);
     font-weight: var(--font-semi-bold);
     text-transform: uppercase;
 }
@@ -296,7 +303,7 @@ input {
 
 .active-link {
     position: relative;
-    color: var(--title-color);
+    color: var(--text-color);
 }
 
 .active-link::before {
@@ -717,6 +724,22 @@ input {
 }
 
 .subscribe__input::placeholder {
+    color: var(--text-color);
+}
+
+.text__subscribe {
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.text__input {
+    background-color: var(--input-color);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    border: none;
     color: var(--text-color);
 }
 
