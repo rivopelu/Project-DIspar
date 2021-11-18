@@ -111,7 +111,6 @@ body.dark-theme {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: .3s;
 }
 
 html {
@@ -364,8 +363,7 @@ input {
 
 .home__social {
     display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 .home__social-link {
@@ -910,7 +908,7 @@ input {
 
 /* For small devices */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .place__container {
         grid-template-columns: max-content;
         justify-content: center;
@@ -937,6 +935,10 @@ input {
         height: 150px;
         width: auto;
     }
+    .place__container {
+        grid-template-columns: repeat(1, max-content);
+    }
+    .place__data .button {}
 }
 
 
